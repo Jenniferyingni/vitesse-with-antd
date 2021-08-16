@@ -1,0 +1,31 @@
+html,
+body,
+#app {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html.dark {
+  background: #121212;
+}
+
+p{
+  margin-top:0;
+  margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  font-size:1.5em;
+}
+
+a {
+  color:#7546c9
+}
+
+[data-theme="dark"] a {
+  color: #390c7d;
+  background-color: transparent;
+}
