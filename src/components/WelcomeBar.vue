@@ -6,7 +6,7 @@
           {{ sayHi }},
         </h1>
         <p class="mb-0">
-          {{ `欢迎回来，xxx 😊` }}
+          {{ `欢迎回来，xxxx 😊` }}
         </p>
       </div>
     </div>
