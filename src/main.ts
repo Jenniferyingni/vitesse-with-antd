@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import { setupLayouts } from "layouts-generated";
 import generatedRoutes from "pages-generated";
 
+import 'ant-design-vue/dist/antd.less';
 
 import "virtual:windi.css";
 import "./styles/main.css";

@@ -2,7 +2,7 @@
   <main
     class="w-full min-h-full flex flex-col bg-gray-10 dark:bg-black text-gray-70 dark:text-gray-20 overflow-hidden"
   >
-    <!-- <Header class="w-full fixed top-0 z-50"/> -->
+    <Header class="w-full fixed top-0 z-50"/>
     <div class="flex-1 flex min-h-0 mt-16">
       <article class="overflow-auto w-full py-4 px-18 dark:bg-gray-80">
         <router-view v-slot="{ Component }">
