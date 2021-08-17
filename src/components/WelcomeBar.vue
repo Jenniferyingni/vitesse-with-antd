@@ -5,9 +5,9 @@
         <h1 class="text-lg font-semibold">
           {{ sayHi }},
         </h1>
-        <!-- <p class="mb-0">
-          {{ `欢迎回来，${userInfo?.name || ''} 😊` }}
-        </p> -->
+        <p class="mb-0">
+          {{ `欢迎回来，xxx 😊` }}
+        </p>
       </div>
     </div>
   </div>
