@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-import { watch, ref } from 'vue'
+import { watch, ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -50,8 +50,8 @@ watch(activeKey, (activeKey) => {
   router.push(activeKey)
 })
 
-watch(router.currentRoute, val => {
-  activeKey.value = val.path
+onMounted(() => {
+  activeKey.value = router.currentRoute.value.path
 })
 
 </script>
