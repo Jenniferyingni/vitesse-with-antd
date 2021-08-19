@@ -43,6 +43,9 @@ import { watch, ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+const store = useStore()
+
+import { useStore } from "vuex";
 
 //tab相关逻辑
 const activeKey = ref('/')
@@ -52,6 +55,7 @@ watch(activeKey, (activeKey) => {
 
 onMounted(() => {
   activeKey.value = router.currentRoute.value.path
+  store.dispatch("actionGetUserInfo")
 })
 
 </script>

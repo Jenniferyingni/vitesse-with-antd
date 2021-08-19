@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import store from '~/store';
 import { createRouter, createWebHistory } from "vue-router";
 import { setupLayouts } from "layouts-generated";
 import generatedRoutes from "pages-generated";
@@ -19,6 +20,9 @@ import "./styles/main.css";
     routes,
   });
   app.use(router);
+
+  // Configure vuex store
+  app.use(store)
 
   app.mount("#app", true);
 })();

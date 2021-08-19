@@ -6,7 +6,7 @@
           {{ sayHi }},
         </h1>
         <p class="mb-0">
-          {{ `欢迎回来，xxxx 😊` }}
+          {{ `欢迎回来，${userInfo?.name} 😊` }}
         </p>
       </div>
     </div>
@@ -15,10 +15,9 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-
-// import { useStore } from "vuex";
-// const store = useStore();
-// const userInfo = computed(() => store.state.userInfo)
+import { useStore } from "vuex";
+const store = useStore();
+const userInfo = computed(() => store.state.userInfo)
 
 const today = ref<Date>(new Date())
 const sayHi = computed(() => {
