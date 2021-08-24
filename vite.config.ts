@@ -7,6 +7,12 @@ import Layouts from "vite-plugin-vue-layouts";
 import ViteComponents from "vite-plugin-components";
 import ViteIcons, { ViteIconsResolver } from "vite-plugin-icons";
 
+import { viteThemePlugin, antdDarkThemePlugin } from 'vite-plugin-theme';
+import { getLessVars } from 'antd-theme-generator';
+// antd自定义变量和暗黑模式变量
+import antdCustomVars from './src/antd/custom'
+const antdDarkVars = getLessVars('./node_modules/ant-design-vue/lib/style/themes/dark.less')
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve:{
@@ -45,6 +51,15 @@ export default defineConfig({
     }),
     // https://github.com/antfu/vite-plugin-icons
     ViteIcons(),
+    viteThemePlugin({
+      colorVariables: ['#7546c9'],
+    }),
+    antdDarkThemePlugin({
+      darkModifyVars: {
+        'primary-color': '#7546c9',
+        ...antdDarkVars
+      }
+    })
   ],
   server: {
     host: '0.0.0.0',
