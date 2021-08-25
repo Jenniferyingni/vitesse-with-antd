@@ -1,7 +1,7 @@
 <template>
   <header class="flex bg-white shadow-md">
     <div
-      class="flex items-center justify-between w-full px-20 border-gray-10 dark:bg-gray-90 dark:border-b-0 border-b-1"
+      class="flex items-center justify-between w-full px-20 border-gray-100 dark:bg-gray-900 dark:border-b-0 border-b-1"
     >
       <div class="flex items-center w-3/4">
         <div class="flex mr-10 mt-2">
